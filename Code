@@ -1,0 +1,285 @@
+import pandas as pd 
+import matplotlib.pyplot as plt 
+
+def menu():
+    print("*************************************************************")
+    print("       Project On Airport Management System       ")
+    print("*************************************************************")
+    print(" Press:- 0. To know about the project")
+    print(" Press:- 1. To know information about flights")
+    print(" Press:- 2. To read the flight schedule")
+    print(" Press:- 3. To add new employ data entry")
+    print(" Press:- 4. To get information about the employees")
+    print(" Press:- 5. To get timings of every flight")
+    print(" Press:- 6. To see the canceled flights")
+    print(" Press:- 7. To check attendence of employees")
+    print(" Press:- 8. To see the passenger list of Air India")
+    print(" Press:- 9. To see the passenger list of Spicejet")
+    print(" Press:- 10.To see the passenger list of Dubai Airlines")
+    print(" Press:- 11.To see the passenger list of AV Airlines")
+    print(" Press:- 12.To get top and bottom 10 record from passenger list of Air India")
+    print(" Press:- 13.To get top and bottom 10 record from passenger list of Spicejet")
+    print(" Press:- 14.To get top and bottom 10 record from passenger list of Dubai Airlines")
+    print(" Press:- 15.To get top and bottom 10 record from passenger list of AV Airlines")
+    print(" Press:- 16.To get information about airport")
+    print(" Press:- 17.To get the no. of gates and their function")
+    print(" Press:- 18.To get Scatter plot of fares of all flights")
+    print(" Press:- 19.To get Bar graph of no. of passengers of all flights")
+    print(" Press:- 20.To get Scatter plot of no. of flights per day")
+    print(" Press:- 21.To get Bar graph of employee's salary")
+    print(" Press:- 22.To see all the original CSVs")
+    
+menu()
+
+def about():
+    print("This project is based on the flight management system of an airport"\
+          "The project is able to perform 22 menu functions which does diffrent functions"\
+          "")
+    
+def info_flights():
+    print("The information are as follows:-")
+    print()
+    df= pd.read_csv('flightinformation.csv')
+    print(df)
+    
+def flight_schedule():
+    print("The flight schedule are as follows:-")
+    print()
+    df= pd.read_csv('flightschedule.csv')
+    print(df)
+
+def new_data():
+    print("Please input new data:-")
+    x= input("Enter name:-")
+    y= input("Enter empno:-")
+    z= input("Enter age:-")
+    a= input("Enter salary:-")
+    b= input("Enter sex:-")
+    d= input("Enter designation:-")  
+    e= input("Enter D-O-J:-")
+    f= input("Enter mobile no.:-")
+    print("The new data you want to enter is:-")
+    print(x,y,z,a,b,d,e,f, sep='     ')
+    
+def employee_info():
+    print("The information of employees are as follows:-")
+    df= pd.read_csv('employeeinfo.csv')
+    print(df)
+    
+def flight_timing():
+    print("The flight timings are as follows:-")
+    df= pd.read_csv('timing.csv')
+    print(df)
+    
+def cancelled_flights():
+    print("The cancelled flights are:-")
+    df= pd.read_csv('flightscancelled.csv')
+    print(df)
+    
+def employee_attendence():
+    print("The employee attendence is:-")
+    df= pd.read_csv('employeeattendence.csv')
+    print(df)
+    
+def passenger_airindia():
+    print("The list of passengers in airindia flight is:-")
+    df= pd.read_csv('airindiapassengers.csv')
+    print(df)
+    
+def passenger_spicejet():
+    print("The list of passengers in spicejet flight is:-")
+    df= pd.read_csv('spicejetpassengers.csv')
+    print(df)
+    
+def passenger_dubaiairlines():
+    print("The list of passengers in dubaiairlines flight is:-")
+    df= pd.read_csv('dubaiairlinespassengers.csv')
+    print(df)
+    
+def passenger_avairlines():
+    print("The list of passengers in avairlines flight is:-")
+    df= pd.read_csv('avalpassengers.csv')
+    print(df)
+    
+def topandbottom10_airindia():
+    print("The top and bottom 10 passengers of airindia:-")
+    df= pd.read_csv('airindiapassengers.csv')
+    print("The top 10 passengers are:-")
+    print(df.head(10))
+    print("The bottom 10 passengers are:-")
+    print(df.tail(10))
+    
+def topandbottom10_spicejet():
+    print("The top and bottom 10 passengers of spicejet:-")
+    df= pd.read_csv('spicejetpassengers.csv')
+    print("The top 10 passengers are:-")
+    print(df.head(10))
+    print("The bottom 10 passengers are:-")
+    print(df.tail(10))
+    
+def topandbottom10_dubaiairlines():
+    print("The top and bottom 10 pssengers of dubaiairlines:-")
+    df= pd.read_csv('dubaiairlinespassengers.csv')
+    print("The top 10 passengers are:-")
+    print(df.head(10))
+    print("The bottom 10 passengers are:-")
+    print(df.tail(10))
+    
+def topandbottom10_avairlines():
+    print("The top and bottom 10 passengers of avairlines:-")
+    df= pd.read_csv('avalpassengers.csv')
+    print("The top 10 passengers are:-")
+    print(df.head(10))
+    print("The bottom 10 passengers are:-")
+    print(df.tail(10))
+    
+def about_airport():
+    print("This airport is a huge airport which is situated in mumbai and is situated in the powai region of mumbai and is the first airport to have the largest runway in india and is one of the best airpors in the management and security. The cleaniness of of the airport is the best in the whole world. this is an international airport which accepts more than 50000 planes by which it takes off and lands down on the airport. Everyday about 9200000 people travel through the airport for international and domestic flights. Each and every flight is maintained by the flight management system in which about 150 employees are employed to do the work.")
+    
+def gates_functionandnumber():
+    print("There are 25 gates in total. Their functions are as folllows:-")
+    print("1. Gate 1,2,3 and 5 are for Entry. ")
+    print("2. Gate 8,15,25,16 and 22 are for Exit")
+    print("3. Gate 4,6,7,9 and 10 are for Visa ")
+    print("4. Gate 11,12,13,14 and 17 are for Foriegn Visas")
+    print("5. Gate 18,19,20,21,23 and 24 are for Departure of flight")
+    
+def flight_fares():
+    print("The flight fares are as follows:-")
+    df3= pd.read_csv('prices.csv')
+    print(df3)
+    df3.plot(kind='scatter',x='F. Fares',y='F.name')
+    plt.xlabel('Name')
+    plt.ylabel('Fares')
+    plt.show()
+    
+def number_passengers():
+    print("The number of passengers in all flights are:-")
+    df= pd.read_csv('totalpassengers.csv')
+    print(df)
+    df.plot(kind='bar',x='Flight name',y='Passenger Count')
+    plt.xlabel('Flight name')
+    plt.ylabel('Passenger count')
+    plt.show()
+    
+def number_flights():
+    print("The number of flights per day are:-")
+    df= pd.read_csv('flightschedule.csv', nrows=30)
+    print(df)
+    df.plot(kind='scatter',x='F.No',y='F.name')
+    plt.xlabel('Flight No.')
+    plt.ylabel('Flight Name')
+    plt.show()
+    
+def employee_salary():
+    print("The salary of employees are:-")
+    df= pd.read_csv('employeeinfo.csv', nrows = 20)
+    print(df)
+    df.plot(kind='bar',x='Emp Name',y='Emp Salary')
+    plt.xlabel('Employee name')
+    plt.ylabel('Employee salary')
+    plt.show()
+    
+def original_csvs():
+    print("The original CSVs are:-")
+    print("")
+    print("1. Flight Information")
+    df= pd.read_csv('flightinformation.csv')
+    print(df)
+    print("")
+    print("2. Flight Schedule")
+    df1= pd.read_csv('flightschedule.csv')
+    print(df1)
+    print("")
+    print("3. Employee Information")
+    df2= pd.read_csv('employeeinfo.csv')
+    print(df2)
+    print("")
+    print("4. Flight Timing")
+    df3= pd.read_csv('timing.csv')
+    print(df3)
+    print("")
+    print("5. Cancelled Flights")
+    df4= pd.read_csv('flightscancelled.csv')
+    print(df4)
+    print("")
+    print("6. Employee Attendence")
+    df5= pd.read_csv('employeeattendence.csv')
+    print(df5)
+    print("")
+    print("7. Passenger List Of Air India")
+    df6= pd.read_csv('airindiapassengers.csv')
+    print(df6)
+    print("")
+    print("8. Passenger List Of Spicejet")
+    df7= pd.read_csv('spicejetpassengers.csv')
+    print(df7)
+    print("")
+    print("9. Passenger List Of Dubai Airlines")
+    df8= pd.read_csv('dubaiairlinespassengers.csv')
+    print(df8)
+    print("")
+    print("10. Passenger List Of AV Airlines")
+    df9= pd.read_csv('avalpassengers.csv')
+    print(df9)
+    print("")
+    
+
+opt=""
+while(1):
+    opt= int(input("Enter your choice:-"))    
+    if opt==0:
+        about()
+    elif opt==1:
+        info_flights()
+    elif opt==2:
+        flight_schedule()
+    elif opt==3:
+        new_data()
+    elif opt==4:
+        employee_info()
+    elif opt==5:
+        flight_timing()
+    elif opt==6:
+        cancelled_flights()
+    elif opt==7:
+        employee_attendence()
+    elif opt==8:
+        passenger_airindia()
+    elif opt==9:
+        passenger_spicejet()
+    elif opt==10:
+        passenger_dubaiairlines()
+    elif opt==11:
+        passenger_avairlines()
+    elif opt==12:
+        topandbottom10_airindia()
+    elif opt==13:
+        topandbottom10_spicejet()
+    elif opt==14:
+        topandbottom10_dubaiairlines()
+    elif opt==15:
+        topandbottom10_avairlines()
+    elif opt==16:
+        about_airport()
+    elif opt==17:
+        gates_functionandnumber()
+    elif opt==18:
+        flight_fares()
+    elif opt==19:
+        number_passengers()
+    elif opt==20:
+        number_flights()
+    elif opt==21:
+        employee_salary()
+    elif opt==22:
+        original_csvs()
+    else:
+        print("Invalid Input")
+        print("\a")
+    i=input("Do you wish to continue y or n:-")
+    if i=='y' or i=='Y':
+        continue
+    else:
+        break
+    
